@@ -1,0 +1,15 @@
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="listData"> <!--[dataSource]="listData"  here we specify from where to get the data -->
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+
+    <!--The *matRowDef directive in Angular Material is used within the <mat-table> component to define how each row in the table should be rendered. It specifies the template for a row in the table, and it binds the columns that will be displayed for each row of data.-->
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    <ng-container matColumnDef="fullName"> <!--for column to get from displaycolumns-->
+      <mat-header-cell  *matHeaderCellDef>Full Name</mat-header-cell> <!--tag for header-->
+      <mat-cell *matCellDef="let element">((element|json))</mat-cell><!--tag for body & let element used to make iteration on datasource-->
+      <!--The syntax {{ element | json }} in Angular is used to display an object in JSON format in the template. This can be helpful during development or debugging when you want to quickly inspect the structure and values of an object without manually formatting it.
+      Why Use {{ element | json }}?It's often used to display the entire object or nested data in a readable format, especially if you want to quickly see what data is being passed into the table rows (element).-->
+    </ng-container>
+
+    </mat-table>
+</div>
