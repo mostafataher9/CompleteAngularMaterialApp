@@ -24,9 +24,6 @@ mat-radio-group mat-radio-button{
 .button-row button{
   margin: 5px;
 }
-.mat-radio-group mat-radio-button{
-  margin-left:5px;
-}
 snack-bar.container.success{
   color: #fff;
   background-color: #5cb85c;
@@ -35,7 +32,9 @@ snack-bar.container.notification simple-snack-bar{
   font-size: 18px ! important;
   font-weight: bold;
 }
-
-
+/*here every tag in controles-container will be width:100% */
+.controles-container>*{
+  width:100%
+}
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -15,6 +15,7 @@ import {MatTableModule} from '@angular/material/table';
 import { EmployeeListComponent } from '../employees/employee-list/employee-list.component';
 import { EmployeesComponent } from '../employees/employees.component';
 import { SharedModule } from '../shared/shared.module';
+//Sometimes, you might want to re-export modules to make them available from a central module. This allows you to gather related functionalities from different files and export them from a single entry point.
 @NgModule({
   imports: [
     CommonModule,
